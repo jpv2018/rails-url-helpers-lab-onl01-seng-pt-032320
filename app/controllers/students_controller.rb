@@ -21,11 +21,4 @@ class StudentsController < ApplicationController
       @student = Student.find(params[:id])
     end
 
-    def activate_student
-      if self.active?
-        self.update_attribute(:active, false)
-      else
-        self.update_attribute(:active, true)
-      end
-    end
 end
